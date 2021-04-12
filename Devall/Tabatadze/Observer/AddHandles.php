@@ -8,7 +8,7 @@ use Magento\Framework\Event\ObserverInterface;
 class AddHandles implements ObserverInterface
 {
 
-    public function execute(\Magento\Framework\Event\Observer $observer)
+    public function execute(Observer $observer)
     {
         $product = $observer->getEvent()->getProduct();
         if($product->hasData('expiry_date')) {
